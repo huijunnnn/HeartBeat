@@ -28,7 +28,4 @@ jobs:
           gradle-version: 7.6
       - name: Execute Gradle build
         run: ./gradlew build
-      - name: Upload Test Report to Codacy
-        run: |
-          export CODACY_PROJECT_TOKEN=${{secrets.CODACY_TEST_COVERAGE_API_TOKEN}}
-          bash <(curl -Ls https://coverage.codacy.com/get.sh)
+
